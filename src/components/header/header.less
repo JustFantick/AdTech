@@ -1,0 +1,30 @@
+.header {
+	width: 100%;
+	padding: #adapt(48, 20)[@value] 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__title {
+		font-weight: 600;
+		font-size: #adapt(40, 25)[@value];
+		line-height: 1.5;
+
+		color: #4A4A4A;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__list-item {
+		cursor: pointer;
+		font-weight: 400;
+
+		font-size: #adapt(18, 16)[@value];
+		color: #777777;
+		margin: 0 1.5rem;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+}

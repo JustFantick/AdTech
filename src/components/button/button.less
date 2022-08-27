@@ -1,0 +1,35 @@
+.button {
+	padding: #adapt(13, 11)[@value] #adapt(33, 18)[@value];
+	border: 1px solid;
+	border-color: #289BDE;
+	border-radius: 5px;
+	cursor: pointer;
+
+	&.white {
+		color: #289BDE;
+
+		@media (min-width: 769px) {
+			transition: all 0.3s ease-in;
+
+			&:hover {
+				background-color: #289BDE;
+				color: white;
+			}
+		}
+	}
+
+	&.blue {
+		color: white;
+		background-color: #289BDE;
+
+		@media (min-width: 769px) {
+			transition: all 0.3s ease-in;
+
+			&:hover {
+				background-color: white;
+				color: #289BDE;
+			}
+		}
+	}
+
+}
