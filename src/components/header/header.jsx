@@ -24,7 +24,6 @@ export default class Header extends Component {
 	render() {
 		const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 		let anchorList, rightSection;
-		console.log(vw);
 
 		if (vw < 900 && vw > 375) {
 			anchorList =
