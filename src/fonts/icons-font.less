@@ -9,8 +9,8 @@
 	font-display: block;
 }
 
-[class^="ico-"]::before,
-[class*=" ico-"]::before {
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
 	font-family: 'icomoon' !important;
 	speak: never;
 	font-style: normal;
@@ -23,10 +23,26 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.ico-name:before {
+.icon-arrow:before {
+	content: "\e902";
+}
+
+.icon-tikTok:before {
 	content: "\e900";
-	color: white;
-	font-size: #adapt(30, 22)[@value];
-	cursor: pointer;
-	padding: 5px;
+}
+
+.icon-twitter:before {
+	content: "\e901";
+}
+
+.icon-doubleQuote:before {
+	content: "\e903";
+}
+
+.icon-facebook:before {
+	content: "\e904";
+}
+
+.icon-linkedIn:before {
+	content: "\e905";
 }

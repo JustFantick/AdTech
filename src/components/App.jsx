@@ -12,6 +12,7 @@ class App extends Component {
 			<div className="wrapper">
 				<div className="wrapper__container">
 					<Header />
+					<Main />
 				</div>
 			</div>
 		);
