@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Button from '../button/button.jsx'
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,18 +12,47 @@ class Main extends Component {
 		return (
 			<main className="main">
 				<Swiper
-					slidesPerView={2}
-					speed={500}
-					navigation
+					modules={[Navigation]}
+					spaceBetween={50}
+					slidesPerView={1}
+					speed={700}
+					navigation={
+						{
+							prevEl: '.prev',
+							nextEl: '.next',
+						}
+					}
 					onSwiper={(swiper) => console.log(swiper)}
 					onSlideChange={() => console.log('slide change')}
 				>
-					<SwiperSlide>Slide 1
-						<div className='icon-arrow'></div>
+					<SwiperSlide>
+						<img src={require('../../img/bigSliderImage.jpg')} alt='Image missed'></img>
+						<div
+							className='slide-content'>
+							<h2 className='slide-title'>Get Started Digital <br /> Learning</h2>
+							<Button type='blue' text='Get started' />
+						</div>
+
 					</SwiperSlide>
-					<SwiperSlide>Slide 2</SwiperSlide>
-					<SwiperSlide>Slide 3</SwiperSlide>
-					<SwiperSlide>Slide 4</SwiperSlide>
+					<SwiperSlide>
+						<img src={require('../../img/bigSliderImage.jpg')} alt='Image missed'></img>
+						<div className='slide-content'>
+							<h2 className='slide-title'>Second slide</h2>
+							<Button type='blue' text='Get started' />
+						</div>
+
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={require('../../img/bigSliderImage.jpg')} alt='Image missed'></img>
+						<div className='slide-content'>
+							<h2 className='slide-title'>Third slide</h2>
+							<Button type='blue' text='Get started' />
+						</div>
+
+					</SwiperSlide>
+
+					<div className='icon-arrow prev'></div>
+					<div className='icon-arrow next'></div>
 				</Swiper>
 			</main >
 		);
