@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Main from './main/main.jsx';
+import StartSlider from './start-slider/start-slider.jsx';
 import Header from './header/header.jsx';
 class App extends Component {
 	constructor(props) {
@@ -12,7 +12,7 @@ class App extends Component {
 			<div className="wrapper">
 				<div className="wrapper__container">
 					<Header />
-					<Main />
+					<StartSlider />
 				</div>
 			</div>
 		);

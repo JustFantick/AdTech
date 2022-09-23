@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/less';
 import 'swiper/less/navigation';
 
-class Main extends Component {
+class StartSlider extends Component {
 	render() {
 		return (
 			<main className="main">
@@ -54,9 +54,8 @@ class Main extends Component {
 					<div className='icon-arrow prev'></div>
 					<div className='icon-arrow next'></div>
 				</Swiper>
-			</main >
+			</main>
 		);
 	}
 }
-
-export default Main;
+export default StartSlider;
