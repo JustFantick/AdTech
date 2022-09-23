@@ -1,0 +1,93 @@
+.courses {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	&__main-title {
+		font-family: 'Poppins';
+		font-weight: 600;
+		font-size: #adapt(45, 18)[@value];
+		line-height: 1.333;
+
+		text-align: center;
+		color: #1D1D1D;
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		font-family: 'Poppins';
+		font-weight: 400;
+		font-size: #adapt(16, 14)[@value];
+		line-height: 1.875;
+		text-align: center;
+		color: #777777;
+
+		margin-bottom: #adapt(50, 16)[@value];
+	}
+
+	&__body {
+		margin-bottom: #adapt(50, 24)[@value];
+	}
+}
+
+.coursCard {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(1fr, 3);
+	gap: #adapt(24, 17)[@value];
+
+	&__item {
+		display: flex;
+		align-items: center;
+		border: 1px solid #E8E8E8;
+		border-radius: 5px;
+		overflow: hidden;
+		gap: #adapt(24, 20)[@value];
+
+		@media (max-width: 500px) {
+			flex-direction: column;			
+		}
+	}
+
+	&__text {
+		padding: 20px 20px 20px 0;
+
+		img {
+			flex: 1 1 auto;
+			object-fit: cover;
+		}
+
+		h5 {
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: #adapt(25, 16)[@value];
+			line-height: 1.52;
+			color: #4A4A4A;
+			margin-bottom: #adapt(10, 8)[@value];
+		}
+
+		p {
+			font-family: 'Poppins';
+			font-weight: 400;
+			font-size: #adapt(16, 14)[@value];
+			line-height: 1.5;
+			color: #777777;
+			margin-bottom: 10px;
+
+			.price {
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 1.5;
+
+				color: #289BDE;
+			}
+		}
+	}
+
+	@media (max-width: 1200px) {
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1fr, 6);
+	}
+}

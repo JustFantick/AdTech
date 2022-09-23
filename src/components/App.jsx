@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import StartSlider from './start-slider/start-slider.jsx';
 import Header from './header/header.jsx';
+import StartSlider from './start-slider/start-slider.jsx';
+import Courses from './courses/courses.jsx';
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -13,6 +14,8 @@ class App extends Component {
 				<div className="wrapper__container">
 					<Header />
 					<StartSlider />
+					<Courses />
+					<section></section>
 				</div>
 			</div>
 		);
