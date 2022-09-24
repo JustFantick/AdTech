@@ -2,18 +2,6 @@ import React, { Component } from 'react'
 import Button from '../button/button.jsx'
 
 export default class Courses extends Component {
-	componentDidMount() {
-		console.log(window.innerWidth);
-		if (window.innerWidth < 500) {
-			this.isMobile = true;
-			console.log(this.isMobile);
-		} else {
-			this.isMobile = false;
-			console.log(this.isMobile);
-		}
-
-		this.img1 = require('../../img/cours_1.jpg');
-	}
 	render() {
 		const cardsPc = <div className="courses__body coursCard">
 			<div className="coursCard__item">
@@ -121,8 +109,6 @@ export default class Courses extends Component {
 				</div>
 			</div>
 		</div>;
-
-
 
 		return (
 			<section className='courses'>
