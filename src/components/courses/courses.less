@@ -44,10 +44,6 @@
 		border-radius: 5px;
 		overflow: hidden;
 		gap: #adapt(24, 20)[@value];
-
-		@media (max-width: 500px) {
-			flex-direction: column;			
-		}
 	}
 
 	&__text {
@@ -75,7 +71,7 @@
 			color: #777777;
 			margin-bottom: 10px;
 
-			.price {
+			&.price {
 				font-family: 'Poppins';
 				font-weight: 600;
 				font-size: 18px;
@@ -83,6 +79,17 @@
 
 				color: #289BDE;
 			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		&__item {
+			flex-direction: column;
+			gap: 0;
+		}
+
+		&__text {
+			padding: 10px 20px;
 		}
 	}
 
