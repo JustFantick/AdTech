@@ -1,0 +1,117 @@
+.institute {
+	display: flex;
+
+	&__image {
+		flex: 0 0 50%;
+
+		& img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		flex: 0 0 50%;
+	}
+
+	@media (max-width: 880px) {
+		flex-direction: column;
+	}
+}
+
+.inst-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	background-color: rgb(244, 250, 253);
+	padding: #adapt(60, 20)[@value];
+
+	@media (min-width: 1320px) {
+		padding: 60px;
+	}
+
+	& div:last-child {
+		align-self: flex-start;
+	}
+
+	&__title {
+		font-family: 'Poppins';
+		font-weight: 600;
+		font-size: #adapt(45, 20)[@value];
+
+		@media (min-width: 1320px) {
+			font-size: 45px;
+		}
+
+		line-height: 1.33;
+		color: #1D1D1D;
+
+		margin-bottom: #adapt(10, 8)[@value];
+	}
+
+	&__text {
+		font-family: 'Poppins';
+		font-weight: 400;
+		font-size: #adapt(16, 14)[@value];
+
+		line-height: 1.875;
+		color: #777777;
+
+		& p {
+			margin-bottom: #adapt(30, 21)[@value];
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		margin-bottom: #adapt(30, 16)[@value];
+	}
+
+	&__numbers {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 16px;
+		column-gap: #adapt(50, 30)[@value];
+
+		width: 100%;
+
+		&>div {
+			flex: 0 0 auto;
+		}
+
+		margin-bottom: #adapt(30, 16)[@value];
+	}
+}
+
+.instituteBigNumber {
+	& h4 {
+		font-family: 'Poppins';
+		font-weight: 600;
+		font-size: #adapt(45, 25, )[@value];
+
+		@media (min-width: 1320px) {
+			font-size: 45px;
+		}
+
+		line-height: 1.52;
+
+		color: #1D1D1D;
+	}
+
+	& p {
+		font-family: 'Poppins';
+		font-weight: 500;
+		font-size: #adapt(20, 16)[@value];
+
+		@media (min-width: 1320px) {
+			font-size: 20px;
+		}
+
+		line-height: 1.5;
+		color: #777777;
+	}
+}
