@@ -11,47 +11,67 @@ class Institute extends Component {
 	}
 
 	handleStringChange(e) {
-		const textToAdd = " don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.";
+		const textToAdd_1 = " don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.";
+		const textToAdd_2 = "Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined."
 
-		let target = e.target;
-		let i = 0, length = textToAdd.length;
+		const breakPoint = 168;
 
-		if (target.textContent.length > 168) {
-			let i = target.textContent.length;
+		let parent = e.target.closest('.inst-content__text');
+		parent.classList.toggle('active');
+		let paragraphs = parent.querySelectorAll('p');
 
-			let id = setInterval(() => {
+		const speed = 7;
 
-				if (i > 165) {
-					target.textContent = target.textContent.substring(0, i - 1);
+		if (parent.textContent.length > breakPoint) {
+			let i = paragraphs[1].textContent.length;
+
+			let delete1 = setInterval(() => {
+				if (i > 0) {
+					paragraphs[1].textContent = paragraphs[1].textContent.substring(0, i - 1);
 					i--;
 				} else {
-					target.textContent = target.textContent.concat("...");
-					clearInterval(id);
-				}
-			}, 10);
-		} else {
-			e.target.textContent = e.target.textContent.substring(0, e.target.textContent.length - 3);
+					clearInterval(delete1);
 
-			let id = setInterval(() => {
-				if (i < length) {
-					e.target.textContent = target.textContent.concat(textToAdd[i]);
-					i++;
-				} else {
-					clearInterval(id);
+					i = paragraphs[0].textContent.length;
+					let delete2 = setInterval(() => {
+						if (i > breakPoint - 3) {
+							paragraphs[0].textContent = paragraphs[0].textContent.substring(0, i - 1);
+							i--;
+						} else {
+							paragraphs[0].textContent = paragraphs[0].textContent.concat("...");
+							clearInterval(delete2);
+						}
+					}, speed);
 				}
-			}, 10);
+			}, speed);
+		} else {
+			paragraphs[0].textContent = paragraphs[0].textContent.substring(0, paragraphs[0].textContent.length - 3);
+
+			let i = 0;
+			let concat1 = setInterval(() => {
+				if (i < textToAdd_1.length) {
+					paragraphs[0].textContent = paragraphs[0].textContent.concat(textToAdd_1[i++]);
+				} else {
+					clearInterval(concat1);
+					i = 0;
+					let concat2 = setInterval(() => {
+						if (i < textToAdd_2.length) {
+							paragraphs[1].textContent = paragraphs[1].textContent.concat(textToAdd_2[i++]);
+						} else {
+							clearInterval(concat2);
+						}
+					}, speed);
+				}
+			}, speed);
 		}
 	}
 
 	render() {
 
-		// const textToAdd = "don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.";
-
 		const textPc = <div className="inst-content__text"
 			onClick={this.handleStringChange}>
-			There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which...
-			{/* <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which...</p> */}
-			{/* <p>Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined.</p> */}
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which...</p>
+			<p></p>
 		</div>;
 
 		const textMb = <div className="inst-content__text">
@@ -77,7 +97,11 @@ class Institute extends Component {
 				</div>
 				<div className="institute__content inst-content">
 					<div className="inst-content__title">Explore The elearning Institute</div>
-					{window.innerWidth < 880 ? textPc : textPc}
+					<div className="inst-content__text"
+						onClick={this.handleStringChange}>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which...</p>
+						<p></p>
+					</div>
 					<div className="inst-content__numbers">
 						<div className='instituteBigNumber'>
 							<h4>3.2K+</h4>
