@@ -1,0 +1,43 @@
+.advert {
+	background-color: rgb(40, 155, 222);
+	border-radius: 5px;
+
+	padding: #adapt(80, 30)[@value] #adapt(100, 15)[@value];
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__text {
+		flex: 1 1 60%;
+
+		h3 {
+			font-style: normal;
+			font-weight: 600;
+			font-size: #adapt(45, 18)[@value];
+			line-height: 1.333;
+			color: #FFFFFF;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: #adapt(16, 14)[@value];
+			line-height: 1.65;
+			color: #F4F4F4;
+		}
+	}
+
+	&__btn {
+		flex: 1 1 40%;
+		text-align: right;
+	}
+
+	@media (max-width: 700px) {
+		flex-direction: column;
+
+		&__text {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+}
