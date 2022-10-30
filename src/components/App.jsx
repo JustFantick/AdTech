@@ -4,6 +4,7 @@ import StartSlider from './start-slider/start-slider.jsx';
 import Courses from './courses/courses.jsx';
 import Institute from './institute/institute.jsx';
 import Advert from './advert/advert.jsx';
+import Students from './students/students.jsx';
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -19,6 +20,7 @@ class App extends Component {
 					<Courses />
 					<Institute />
 					<Advert />
+					<Students />
 					<section></section>
 				</div>
 			</div>
