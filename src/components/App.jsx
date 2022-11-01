@@ -5,6 +5,8 @@ import Courses from './courses/courses.jsx';
 import Institute from './institute/institute.jsx';
 import Advert from './advert/advert.jsx';
 import Students from './students/students.jsx';
+import Feedback from './feedback/feedback.jsx';
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -21,6 +23,7 @@ class App extends Component {
 					<Institute />
 					<Advert />
 					<Students />
+					<Feedback />
 					<section></section>
 				</div>
 			</div>

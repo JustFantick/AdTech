@@ -4,11 +4,36 @@
 	@value: calc(@mobSize * 1px + (@pcSize - @mobSize) * ((100vw - 320px) / (@dependWidth - 320)));
 }
 
-.main {
-	border-radius: 5px;
-	overflow: hidden;
+.feedback {
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		h3 {
+			font-weight: 600;
+			font-size: #adapt(45, 20)[@value];
+			line-height: 1.333;
+			color: #1D1D1D;
+
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: #adapt(16, 14)[@value];
+			line-height: 1.875;
+			color: #777777;
+			text-align: center;
+			max-width: 610px;
+		}
+
+		margin-bottom: #adapt(50, 16)[@value];
+	}
 }
 
+/////////////// Slider
 .swiper-slide {
 	position: relative;
 
@@ -73,6 +98,8 @@
 	&:before {
 		color: white;
 		font-size: #adapt(24, 20)[@value];
+
+		color: red;
 	}
 
 	&.prev {

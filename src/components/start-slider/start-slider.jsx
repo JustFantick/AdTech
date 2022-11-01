@@ -5,7 +5,7 @@ import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/less';
-import 'swiper/less/navigation';
+import './start-slider.less'
 
 class StartSlider extends Component {
 	render() {
