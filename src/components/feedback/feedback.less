@@ -8,10 +8,6 @@
 	overflow: visible !important;
 	padding: 0 25px;
 
-	@media (max-width: 1000px) {
-		padding: 0; //will correct
-	}
-
 	&__text {
 		display: flex;
 		justify-content: center;
@@ -39,6 +35,129 @@
 		margin-bottom: #adapt(50, 16)[@value];
 	}
 }
+
+@media (max-width: 1000px) {
+	.feedback {
+		padding: 0;
+
+		&__slider>div {
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.slide {
+		border: 1px solid #E8E8E8;
+		border-radius: 5px;
+		padding: #adapt(40, 20)[@value];
+
+		display: flex;
+		flex-direction: column;
+
+		.slide-top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			margin-bottom: #adapt(20, 10)[@value];
+		}
+
+		.slide-text {
+			font-weight: 400;
+			font-size: #adapt(16, 14)[@value];
+			line-height: 1.875;
+			color: #777777;
+
+			margin-bottom: #adapt(25, 20)[@value];
+		}
+
+		.slide-author {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			.slide-author-image {
+				object-fit: cover;
+				max-width: 100%;
+			}
+
+			.slide-author-name {
+				h6 {
+					font-style: normal;
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 1.5;
+					color: #4A4A4A;
+				}
+
+				p {
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 1.5;
+					color: #777777;
+				}
+			}
+		}
+	}
+}
+
+.rating {
+	display: flex;
+	align-items: flex-end;
+	font-size: 25px;
+
+	position: relative;
+
+	&::before {
+		content: "★★★★★";
+		display: block;
+		letter-spacing: 9px;
+		color: rgb(254, 243, 199);
+		-webkit-text-stroke: 1.5px rgb(245, 158, 11);
+	}
+
+	&__active {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 80%; //
+		height: 100%;
+
+		overflow: hidden;
+
+		&::before {
+			content: "★★★★★";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			color: rgb(251, 191, 36);
+			letter-spacing: 9px;
+			-webkit-text-stroke: 1.5px rgb(245, 158, 11);
+		}
+	}
+
+	&__items {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__item {
+		flex: 0 0 20%;
+		height: 100%;
+		opacity: 0;
+	}
+}
+
 
 /////////////// Slider
 .feedback__slider .swiper {
@@ -111,8 +230,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.3s ease-in-out;
 
 	&::before {
+		transition: all 0.3s ease-in-out;
 		color: #289BDE;
 	}
 
@@ -132,5 +253,15 @@
 
 	&.next::before {
 		transform: translateX(10%);
+	}
+
+	@media (min-width: 1000px) {
+		&:hover {
+			background-color: #289BDE;
+
+			&::before {
+				color: white;
+			}
+		}
 	}
 }
