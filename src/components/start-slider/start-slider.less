@@ -58,15 +58,19 @@
 }
 
 .icon-arrow {
-	position: absolute;
-	top: 50%;
-	z-index: 99;
-	padding: 10px;
-	cursor: pointer;
 
-	&:before {
-		color: white;
-		font-size: #adapt(24, 20)[@value];
+	&.prev,
+	&.next {
+		position: absolute;
+		top: 50%;
+		z-index: 99;
+		padding: 10px;
+		cursor: pointer;
+
+		&:before {
+			color: white;
+			font-size: #adapt(24, 20)[@value];
+		}
 	}
 
 	&.prev {

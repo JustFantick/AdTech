@@ -1,0 +1,110 @@
+.faq {
+
+	&__text {
+		max-width: 638px;
+		margin: 0 auto;
+		text-align: center;
+
+		h3 {
+			margin-bottom: #adapt(20, 8)[@value];
+		}
+
+		margin-bottom: #adapt(50, 16)[@value];
+	}
+
+	&__tabs {
+		max-width: 880px;
+		margin: 0 auto;
+
+		&>div {
+			margin-bottom: #adapt(20, 16)[@value];
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.tab {
+	&__head {
+		border-radius: 5px;
+		background: #FFFFFF;
+		border: 1px solid #E8E8E8;
+
+		padding: #adapt(25, 19)[@value] #adapt(40, 20)[@value];
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: #adapt(20, 14)[@value];
+		line-height: 1.5;
+		color: #4A4A4A;
+		max-width: 80%;
+	}
+
+	&__arrow {
+		transition: all 0.3s ease-in-out;
+		height: 10px;
+		width: 20px;
+
+		position: relative;
+		cursor: pointer;
+
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+
+			height: 100%;
+			width: 1.5px;
+			border-radius: 5px;
+			background-color: #4A4A4A;
+			transform-origin: top;
+		}
+
+		&::after {
+			transform: translate(-50%, 0) rotate(-40deg);
+		}
+
+		&::before {
+			transform: translate(-50%, 0) rotate(40deg);
+		}
+	}
+
+	&__content {
+		transition: all 0.3s ease-in-out;
+		padding: 0 #adapt(40, 1)[@value];
+
+		font-style: normal;
+		font-weight: 400;
+		font-size: 0;
+		line-height: 0;
+		color: #777777;
+		opacity: 0;
+	}
+
+	&.active {
+		.tab__arrow {
+			transform: rotate(180deg);
+		}
+
+		.tab__head {
+			background: rgba(40, 155, 222, 0.1);
+			border-color: transparent;
+		}
+
+		.tab__content {
+			padding: #adapt(20, 16)[@value] #adapt(40, 1)[@value];
+			font-size: #adapt(16, 14)[@value];
+			line-height: 1.5;
+			opacity: 1;
+		}
+	}
+}

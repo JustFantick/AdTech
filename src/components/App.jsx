@@ -6,6 +6,7 @@ import Institute from './institute/institute.jsx';
 import Advert from './advert/advert.jsx';
 import Students from './students/students.jsx';
 import Feedback from './feedback/feedback.jsx';
+import Faq from './faq/faq.jsx';
 
 class App extends Component {
 	constructor(props) {
@@ -24,6 +25,7 @@ class App extends Component {
 					<Advert />
 					<Students />
 					<Feedback />
+					<Faq />
 					<section></section>
 				</div>
 			</div>
