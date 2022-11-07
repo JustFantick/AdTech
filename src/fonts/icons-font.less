@@ -28,14 +28,6 @@
 	font-size: 20px;
 }
 
-.icon-tikTok:before {
-	content: "\e900";
-}
-
-.icon-twitter:before {
-	content: "\e901";
-}
-
 .icon-doubleQuote:before {
 	content: "\e903";
 }
@@ -46,4 +38,34 @@
 
 .icon-linkedIn:before {
 	content: "\e905";
+}
+
+.icon-tikTok:before {
+	content: "\e900";
+}
+
+.icon-twitter:before {
+	content: "\e901";
+}
+
+.icon-facebook,
+.icon-linkedIn,
+.icon-tikTok,
+.icon-twitter {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background-color: #242424;
+	position: relative;
+
+	cursor: pointer;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		font-size: 17px;
+	}
 }

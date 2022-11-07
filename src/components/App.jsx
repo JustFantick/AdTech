@@ -7,6 +7,7 @@ import Advert from './advert/advert.jsx';
 import Students from './students/students.jsx';
 import Feedback from './feedback/feedback.jsx';
 import Faq from './faq/faq.jsx';
+import Footer from './footer/footer.jsx';
 
 class App extends Component {
 	constructor(props) {
@@ -28,6 +29,7 @@ class App extends Component {
 					<Faq />
 					<section></section>
 				</div>
+				<Footer />
 			</div>
 		);
 	}
