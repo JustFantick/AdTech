@@ -60,12 +60,17 @@
 		line-height: 1.875;
 		color: #777777;
 
-		@media (max-width: 768px) {
+		@media (min-width: 768px) {
 			cursor: pointer;
 		}
 
 		& p {
 			transition: all 0.5s ease-in;
+
+			span {
+				color: rgb(40, 155, 222);
+				font-weight: bold;
+			}
 		}
 
 		&.active p {

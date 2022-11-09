@@ -20,7 +20,7 @@ class Institute extends Component {
 		parent.classList.toggle('active');
 		let paragraphs = parent.querySelectorAll('p');
 
-		const speed = 7;
+		const speed = 7;// ms
 
 		if (parent.textContent.length > breakPoint) {
 			let i = paragraphs[1].textContent.length;
@@ -67,23 +67,6 @@ class Institute extends Component {
 	}
 
 	render() {
-
-		const textPc = <div className="inst-content__text"
-			onClick={this.handleStringChange}>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which...</p>
-			<p></p>
-		</div>;
-
-		const textMb = <div className="inst-content__text">
-			There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which
-			<div className='inst-content__mobile-ver' onClick={this.handleStringChange}>
-				<div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
-					<p>Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined.</p>
-				</div>
-			</div>
-		</div>;
-
 		return (
 			<section className='institute'>
 				<div className="institute__image">
@@ -99,7 +82,7 @@ class Institute extends Component {
 					<div className="inst-content__title">Explore The elearning Institute</div>
 					<div className="inst-content__text"
 						onClick={this.handleStringChange}>
-						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which...</p>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words <span>which...</span></p>
 						<p></p>
 					</div>
 					<div className="inst-content__numbers">
