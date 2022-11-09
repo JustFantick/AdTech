@@ -15,6 +15,7 @@ class StartSlider extends Component {
 					modules={[Navigation]}
 					spaceBetween={50}
 					slidesPerView={1}
+					loop={true}
 					speed={700}
 					navigation={
 						{
@@ -22,8 +23,6 @@ class StartSlider extends Component {
 							nextEl: '.next',
 						}
 					}
-					onSwiper={(swiper) => console.log(swiper)}
-					onSlideChange={() => console.log('slide change')}
 				>
 					<SwiperSlide>
 						<img src={require('../../img/bigSliderImage.jpg')} alt='Image missed'></img>
