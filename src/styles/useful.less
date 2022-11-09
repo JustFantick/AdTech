@@ -1,0 +1,8 @@
+#adapt(@pcSize, @mobSize, @dependWidth: 1320) {
+	@sizeDiff: @pcSize - @mobSize;
+
+	@value: calc(@mobSize * 1px + (@pcSize - @mobSize) * ((100vw - 320px) / (@dependWidth - 320)));
+}
+
+@bg-elemet-color: rgb(46, 47, 49);
+@bg-element-color-hover: rgb(57, 58, 60);

@@ -224,8 +224,8 @@ export default class Feedback extends Component {
 		return (
 			<section className='feedback'>
 				<div className="feedback__text">
-					<h3 className='simple-title'>Some Students Feedback</h3>
-					<p className='simple-subtitle'>
+					<h3 className='fub-title'>Some Students Feedback</h3>
+					<p className='fub-subtitle'>
 						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
 					</p>
 				</div>

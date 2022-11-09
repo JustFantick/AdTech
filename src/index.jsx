@@ -1,4 +1,4 @@
-import "./styles.less";
+import "./styles/styles.less";
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
