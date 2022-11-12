@@ -68,7 +68,7 @@ class Institute extends Component {
 
 	render() {
 		return (
-			<section className='institute'>
+			<section className='institute' id='institute'>
 				<div className="institute__image">
 					<img alt='institute.jpg'
 						src={

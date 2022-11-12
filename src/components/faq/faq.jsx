@@ -19,7 +19,7 @@ export default class Faq extends Component {
 	}
 	render() {
 		return (
-			<section className='faq'>
+			<section className='faq' id='faq'>
 				<div className="faq__text">
 					<h3 className='fub-title'>Frequently Asked Questions</h3>
 					<p className='fub-subtitle'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>

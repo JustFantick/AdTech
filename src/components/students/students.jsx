@@ -4,7 +4,7 @@ import Button from '../button/button.jsx'
 export default class Students extends Component {
 	render() {
 		return (
-			<section className='students'>
+			<section className='students' id='students'>
 				<div className='students__header'>
 					<h4>Meet Our Successfull Students</h4>
 					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>

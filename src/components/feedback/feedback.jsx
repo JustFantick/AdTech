@@ -222,7 +222,7 @@ export default class Feedback extends Component {
 			</div>;
 
 		return (
-			<section className='feedback'>
+			<section className='feedback' id='feedback'>
 				<div className="feedback__text">
 					<h3 className='fub-title'>Some Students Feedback</h3>
 					<p className='fub-subtitle'>
