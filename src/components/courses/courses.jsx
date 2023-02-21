@@ -4,7 +4,7 @@ import Button from '../button/button.jsx'
 export default class Courses extends Component {
 	render() {
 		const cardsPc = <div className="courses__body coursCard">
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom ">
 				<img alt='cours_1' src={require('../../img/cours_1.jpg')} />
 
 				<div className='coursCard__text'>
@@ -13,7 +13,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_2.jpg')} alt='cours_2' />
 				<div className='coursCard__text'>
 					<h5>Javascript Basic to advanced</h5>
@@ -21,7 +21,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_3.jpg')} alt='cours_3' />
 				<div className='coursCard__text'>
 					<h5>Fullstack Web Development</h5>
@@ -29,7 +29,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_4.jpg')} alt='cours_4' />
 				<div className='coursCard__text'>
 					<h5>Fullstack Web Development</h5>
@@ -37,7 +37,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_5.jpg')} alt='cours_5' />
 				<div className='coursCard__text'>
 					<h5>Photography Basic Rules</h5>
@@ -45,7 +45,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_6.jpg')} alt='cours_6' />
 				<div className='coursCard__text'>
 					<h5>Lorem ipsum dolor emet</h5>
@@ -56,7 +56,7 @@ export default class Courses extends Component {
 
 		</div>;
 		const cardsTablet = <div className="courses__body coursCard">
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img alt='cours_1' src={require('../../img/cours_1.jpg')} />
 
 				<div className='coursCard__text'>
@@ -65,7 +65,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_2.jpg')} alt='cours_2' />
 				<div className='coursCard__text'>
 					<h5>Javascript Basic to advanced</h5>
@@ -73,7 +73,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_3.jpg')} alt='cours_3' />
 				<div className='coursCard__text'>
 					<h5>Fullstack Web Development</h5>
@@ -83,7 +83,7 @@ export default class Courses extends Component {
 			</div>
 		</div>;
 		const cardsMobile = <div className="courses__body coursCard">
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_mb_1.png')} alt='cours_mb_1' />
 
 				<div className='coursCard__text'>
@@ -92,7 +92,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_mb_2.png')} alt='cours_mb_2' />
 				<div className='coursCard__text'>
 					<h5>Javascript Basic to advanced</h5>
@@ -100,7 +100,7 @@ export default class Courses extends Component {
 					<p className='price'>Price: 20$</p>
 				</div>
 			</div>
-			<div className="coursCard__item">
+			<div className="coursCard__item _scroll-anim _bottom">
 				<img src={require('../../img/cours_mb_3.png')} alt='cours_mb_3' />
 				<div className='coursCard__text'>
 					<h5>Fullstack Web Development</h5>
@@ -112,8 +112,8 @@ export default class Courses extends Component {
 
 		return (
 			<section className='courses' id='courses'>
-				<div className="courses__main-title">Discover Our Popular Courses</div>
-				<div className="courses__subtitle">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+				<div className="courses__main-title _scroll-anim _right">Discover Our Popular Courses</div>
+				<div className="courses__subtitle _scroll-anim _right">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
 
 				{
 					window.innerWidth > 768 ?

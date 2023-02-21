@@ -10,7 +10,7 @@ import './start-slider.less'
 class StartSlider extends Component {
 	render() {
 		return (
-			<main className="main" id='home'>
+			<main className="main _scroll-anim _top" id='home'>
 				<Swiper
 					modules={[Navigation]}
 					spaceBetween={50}

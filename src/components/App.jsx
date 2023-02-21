@@ -16,6 +16,40 @@ class App extends Component {
 		this.state = {};
 	}
 
+	componentDidMount() {
+		//onScrollAnimation: block appears when user scrolled enough
+		const animItems = document.querySelectorAll('._scroll-anim');
+		if (animItems.length > 0) {
+			setTimeout(animateItems, 500);
+
+			window.addEventListener("scroll", animateItems);
+
+			function animateItems() {
+				animItems.forEach(animItem => {
+					const itemHeight = animItem.offsetHeight;
+					const itemOffset = offset(animItem).top;
+					const animStartCoefficient = 5;
+
+					let itemPoint = window.innerHeight - itemHeight / animStartCoefficient;
+					if (itemHeight > window.innerHeight) {
+						itemPoint = window.innerHeight - window.innerHeight / animStartCoefficient;
+					}
+
+					if ((window.scrollY > itemOffset - itemPoint) && window.scrollY < (itemOffset + itemHeight)) {
+						animItem.classList.add('_active');
+					}
+				});
+			}
+		}
+
+		function offset(el) {
+			const rect = el.getBoundingClientRect(),
+				scrollLeft = window.scrollX || document.documentElement.scrollLeft,
+				scrollTop = window.scrollY || document.documentElement.scrollTop;
+			return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+		}
+	}
+
 	render() {
 		return (
 			<div className="wrapper">

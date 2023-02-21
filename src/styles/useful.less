@@ -4,5 +4,44 @@
 	@value: calc(@mobSize * 1px + (@pcSize - @mobSize) * ((100vw - 320px) / (@dependWidth - 320)));
 }
 
+._scroll-anim {
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+
+	&._right {
+		transform: translate(110%, 0);
+	}
+
+	&._top {
+		transform: translate(0%, -30vh);
+	}
+
+	&._bottom {
+		transform: translate(0%, 100%);
+	}
+
+	&._left {
+		//no use
+		transform: translate(-110%, 0);
+	}
+
+	&._scnd {
+		transition: all 0.5s ease-in-out 0.2s;
+	}
+
+	&._thrd {
+		transition: all 0.5s ease-in-out 0.4s;
+	}
+
+	&._frth {
+		transition: all 0.5s ease-in-out 0.6s;
+	}
+
+	&._active {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
 @bg-elemet-color: rgb(46, 47, 49);
 @bg-element-color-hover: rgb(57, 58, 60);

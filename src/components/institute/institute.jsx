@@ -79,13 +79,13 @@ class Institute extends Component {
 					/>
 				</div>
 				<div className="institute__content inst-content">
-					<div className="inst-content__title">Explore The elearning Institute</div>
-					<div className="inst-content__text"
+					<div className="inst-content__title _scroll-anim _right">Explore The elearning Institute</div>
+					<div className="inst-content__text _scroll-anim _right"
 						onClick={this.handleStringChange}>
 						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words <span>which...</span></p>
 						<p></p>
 					</div>
-					<div className="inst-content__numbers">
+					<div className="inst-content__numbers _scroll-anim _right">
 						<div className='instituteBigNumber'>
 							<h4>3.2K+</h4>
 							<p>Online Course</p>

@@ -21,12 +21,12 @@ export default class Faq extends Component {
 		return (
 			<section className='faq' id='faq'>
 				<div className="faq__text">
-					<h3 className='fub-title'>Frequently Asked Questions</h3>
-					<p className='fub-subtitle'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+					<h3 className='fub-title _scroll-anim _right'>Frequently Asked Questions</h3>
+					<p className='fub-subtitle _scroll-anim _right'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 				</div>
 
 				<div className="faq__tabs">
-					<div className="tab">
+					<div className="tab _scroll-anim _bottom">
 						<div className="tab__head" onClick={this.handleTabClick}>
 							<div className="tab__title">What other services are you compatible with?</div>
 							<div className="tab__arrow"></div>
@@ -38,7 +38,7 @@ export default class Faq extends Component {
 
 
 					</div>
-					<div className="tab">
+					<div className="tab _scroll-anim _bottom">
 						<div className="tab__head" onClick={this.handleTabClick}>
 							<div className="tab__title">
 								I have a technical i need resolved, who do i email?							</div>
@@ -51,7 +51,7 @@ export default class Faq extends Component {
 
 
 					</div>
-					<div className="tab">
+					<div className="tab _scroll-anim _bottom">
 						<div className="tab__head" onClick={this.handleTabClick}>
 							<div className="tab__title">What other services are you compatible with?</div>
 							<div className="tab__arrow"></div>
@@ -63,7 +63,7 @@ export default class Faq extends Component {
 
 
 					</div>
-					<div className="tab">
+					<div className="tab _scroll-anim _bottom">
 						<div className="tab__head" onClick={this.handleTabClick}>
 							<div className="tab__title">What other services are you compatible with?</div>
 							<div className="tab__arrow"></div>
