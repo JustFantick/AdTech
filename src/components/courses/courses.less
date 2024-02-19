@@ -44,21 +44,23 @@
 		border-radius: 5px;
 		overflow: hidden;
 		gap: #adapt(24, 20)[@value];
+
+		img {
+			aspect-ratio: 1 / 1;
+			object-fit: contain;
+			height: 100%;
+			max-width: 200px;
+		}
 	}
 
 	&__text {
-		padding: 20px 20px 20px 0;
-
-		img {
-			flex: 1 1 auto;
-			object-fit: cover;
-		}
+		padding: 20px 15px 10px 0;
 
 		h5 {
 			font-family: 'Poppins';
 			font-weight: 600;
-			font-size: #adapt(25, 16)[@value];
-			line-height: 1.52;
+			font-size: #adapt(22, 16)[@value];
+			line-height: 1.5;
 			color: #4A4A4A;
 			margin-bottom: #adapt(10, 8)[@value];
 		}
